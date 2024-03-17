@@ -16,17 +16,14 @@ const Navbar = () => {
           {/* Lama Dev */}
         </motion.span>
         <div className="social">
-          <a href="#">
-            <img src="/facebook.png" alt="" />
+          <a href="https://www.linkedin.com/in/aditya-yadav-499259201?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+            <img src="/linkedin.png" alt="" />
           </a>
-          <a href="#">
+          <a href="https://www.instagram.com/___aditya__yadav___/?igsh=c3dodGluOG0xY2hr">
             <img src="/instagram.png" alt="" />
           </a>
-          <a href="#">
-            <img src="/youtube.png" alt="" />
-          </a>
-          <a href="#">
-            <img src="/dribbble.png" alt="" />
+          <a href="https://www.facebook.com/share/fRaPXEBg6jQF3yFd/?mibextid=qi2Omg">
+            <img src="/facebook.png" alt="" />
           </a>
         </div>
       </div>
