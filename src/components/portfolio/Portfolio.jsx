@@ -5,27 +5,24 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 const items = [
   {
     id: 1,
-    title: "React Commerce",
-    img: "https://images.pexels.com/photos/18073372/pexels-photo-18073372/free-photo-of-young-man-sitting-in-a-car-on-a-night-street.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+    title: "IMDB Clone",
+    img: "/imdb.png?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+    desc: "My IMDB clone app offers a sleek and user-friendly interface for exploring popular, latest, and top-rated movies. With a focus on stunning UI design and captivating animations, users can effortlessly discover trending films and stay up-to-date with the latest releases in the world of cinema.",
+    demolink: "https://imdb-clone-mocha-five-aditya-yadav.vercel.app/"
   },
   {
     id: 2,
-    title: "Next.js Blog",
-    img: "https://images.pexels.com/photos/18023772/pexels-photo-18023772/free-photo-of-close-up-of-a-person-holding-a-wristwatch.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+    title: "EyesOptics Ecommerce",
+    img: "/eyes_optics.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+    desc: "My EyesOptics Ecommerce demo web application, developed using the MERN stack, showcases the potential of an online glasses store. With a focus on providing a realistic shopping experience, users can explore a curated selection of glasses and experiment with various features typically found in e-commerce websites.",
+    demolink: "https://github.com/Aditya1458/ecommerce_eyes_optics"
   },
   {
     id: 3,
     title: "Vanilla JS App",
     img: "https://images.pexels.com/photos/6894528/pexels-photo-6894528.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-  },
-  {
-    id: 4,
-    title: "Music App",
-    img: "https://images.pexels.com/photos/18540208/pexels-photo-18540208/free-photo-of-wood-landscape-water-hill.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+    desc: "My Vanilla JS app is a demonstration of the power and versatility of pure JavaScript for building interactive web applications. Without relying on any frameworks or libraries, this app showcases the capabilities of JavaScript in creating dynamic and engaging user experiences.",
+    demolink: ""
   },
 ];
 
@@ -48,7 +45,9 @@ const Single = ({ item }) => {
           <motion.div className="textContainer" style={{y}}>
             <h2>{item.title}</h2>
             <p>{item.desc}</p>
-            <button>See Demo</button>
+            <a href={item.demolink} target="_blank" rel="noopener noreferrer">
+              <button>See Demo</button>
+            </a>
           </motion.div>
         </div>
       </div>
