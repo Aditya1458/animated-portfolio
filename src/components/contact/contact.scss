@@ -87,5 +87,19 @@
         }
       }
     }
+    .message {
+      padding: 10px 15px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    .error {
+      background-color: #f44336;
+      color: #fff;
+    }
+    .success {
+      background-color: #8bc34a;
+      color: #fff;
+    }
   }
 }

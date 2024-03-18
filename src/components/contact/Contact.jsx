@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import "./contact.scss";
 import { motion, useInView } from "framer-motion";
 import emailjs from "@emailjs/browser";
@@ -26,6 +26,23 @@ const Contact = () => {
 
   const isInView = useInView(ref, { margin: "-100px" });
 
+  useEffect(() => {
+    let errorTimer, successTimer;
+
+    if (error) {
+      errorTimer = setTimeout(() => setError(false), 4000); 
+    }
+
+    if (success) {
+      successTimer = setTimeout(() => setSuccess(false), 4000); 
+    }
+
+    return () => { 
+      clearTimeout(errorTimer);
+      clearTimeout(successTimer);
+    };
+  }, [error, success]);
+
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -38,7 +55,9 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          setSuccess(true)
+          setSuccess(true);
+          formRef.current.reset();
+          setError(false);
         },
         (error) => {
           setError(true);
@@ -110,8 +129,8 @@ const Contact = () => {
           <input type="email" required placeholder="Email" name="email"/>
           <textarea rows={8} placeholder="Message" name="message"/>
           <button>Submit</button>
-          {error && "Error"}
-          {success && "Success"}
+          {error && <div className="message error">Error occurred!</div>}
+          {success && <div className="message success">Message sent successfully!</div>}
         </motion.form>
       </div>
     </motion.div>
