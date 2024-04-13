@@ -31,10 +31,15 @@ const sliderVariants = {
     x: "-220%",
     transition: {
       repeat: Infinity,
-      repeatType:"mirror",
+      repeatType: "mirror",
       duration: 20,
     },
   },
+};
+
+const scrollToContact = () => {
+  const contactSection = document.getElementById("Contact");
+  contactSection.scrollIntoView({ behavior: "smooth" });
 };
 
 const Hero = () => {
@@ -48,14 +53,26 @@ const Hero = () => {
           animate="animate"
         >
           <motion.h2 variants={textVariants}>ADITYA YADAV</motion.h2>
-          <motion.h1 variants={textVariants}>
-            SOFTWARE DEVELOPER
-          </motion.h1>
+          <motion.h1 variants={textVariants}>SOFTWARE DEVELOPER</motion.h1>
           <motion.div variants={textVariants} className="buttons">
-            <motion.button variants={textVariants}>
+            <motion.button
+              variants={textVariants}
+              onClick={() =>
+                window.open(
+                  "https://imdb-clone-mocha-five-aditya-yadav.vercel.app/",
+                  "_blank",
+                  "noopener,noreferrer"
+                )
+              }
+            >
               See the Latest Works
             </motion.button>
-            <motion.button variants={textVariants}>Contact Me</motion.button>
+            <motion.button
+              variants={textVariants}
+              onClick={() => scrollToContact()}
+            >
+              Contact Me
+            </motion.button>
           </motion.div>
           <motion.img
             variants={textVariants}
